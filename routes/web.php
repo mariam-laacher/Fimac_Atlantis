@@ -22,6 +22,9 @@ Route::get('/riyad', function () {
 Route::get('/medinova', function () {
     return view('medinova');
 })->name('medinova');
+Route::get('/residence', function () {
+    return view('residence');
+})->name('residence');
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('login', 'login')->name('login');

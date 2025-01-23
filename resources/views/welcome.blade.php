@@ -499,7 +499,7 @@
                             <div class="text-carusel owl-carousel">
                                 <div class="item">
                                     <i class="flaticon-right-quote flat-large text-primary d-table mx-auto"></i>
-                                    <blockquote class="text-secondary fs-5 fst-italic">“ Basée à Marrakech, Fimac Atlantis se consacre à la création de lieux de vie uniques, alliant élégance, modernité et confort. Forte de son engagement envers l’excellence, la société développe des projets immobiliers qui répondent aux besoins des résidents les plus exigeants. ”</blockquote>
+                                    <blockquote class="text-secondary fs-5 fst-italic">“ Entreprise  immobilière basée à Marrakech, Fimac Atlantis se consacre à la création de lieux de vie uniques, alliant élégance, modernité et confort. Forte de son engagement envers l’excellence, la société développe des projets immobiliers qui répondent aux besoins des résidents les plus exigeants. ”</blockquote>
                                     {{-- <h4 class="mt-4 font-400">Mark Wiggins</h4>
                                     <span class="text-primary font-fifteen">CEO ( Grodins Group )</span> --}}
                                 </div>

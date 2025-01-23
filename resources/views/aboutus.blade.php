@@ -32,21 +32,21 @@
                             <div class="col border-start border-geay mb-5">
                                 <div class="simple-thumb transation px-4">
                                     <span class="h3 down-line text-general mb-4 d-table">01</span>
-                                    <h5 class="my-3"><a href="#" class="text-secondary">Une expertise reconnue dans le secteur immobilier.</a></h5>
+                                    <h5 class="my-3"><a href="#" class="text-secondary">Cuisine  équipée : four à vapeur </a></h5>
                                     {{-- <p></p> --}}
                                 </div>
                             </div>
                             <div class="col border-start border-geay mb-5">
                                 <div class="simple-thumb transation px-4">
                                     <span class="h3 down-line text-general mb-4 d-table">02</span>
-                                    <h5 class="my-3"><a href="#" class="text-secondary">Des biens sélectionnés pour leur qualité et leur emplacement stratégique.</a></h5>
+                                    <h5 class="my-3"><a href="#" class="text-secondary">Double vitrage : fenêtre et double fenêtre.</a></h5>
                                     {{-- <p></p> --}}
                                 </div>
                             </div>
                             <div class="col border-start border-geay mb-5">
                                 <div class="simple-thumb transation px-4">
                                     <span class="h3 down-line text-general mb-4 d-table">03</span>
-                                    <h5 class="my-3"><a href="#" class="text-secondary">Un accompagnement sur-mesure, de la première visite jusqu'à l'emménagement</a></h5>
+                                    <h5 class="my-3"><a href="#" class="text-secondary">Isolation thermique et fonique </a></h5>
                                     {{-- <p>..</p> --}}
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8">
-                        <img src="assets/images/1.png" alt="image not found">
+                        <img src="assets/images/perfecto1.jpg" alt="image not found">
                     </div>
                 </div>
             </div>
