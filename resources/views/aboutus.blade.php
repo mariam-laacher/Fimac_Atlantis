@@ -101,7 +101,7 @@
         <!--============== Approch Section End ==============-->
 
         <!--============== Statistics Section Start ==============-->
-        <div class="full-row pb-0">
+        {{-- <div class="full-row pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -169,11 +169,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!--============== Statistics Section End ==============-->
 
         <!--============== Agents Start ==============-->
-        <div class="full-row">
+        {{-- <div class="full-row">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -208,7 +208,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!--============== Agents End ==============-->
 
         <!--============== Testimonials Start ==============-->
@@ -217,7 +217,7 @@
                 <div class="row">
                     <div class="col-lg-9 mx-auto position-relative">
                         <span class="tagline text-primary">F-A </span>
-                        <h2 class="mb-5"><span class="font-weight-bold">a propos </span>de nous 
+                        <h2 class="mb-5"><span class="font-weight-bold"> ________ </span>
                          </h2>
                         <div class="owl-carousel single-carusel testimonial-slider dot-disable position-static">
                             <div class="testimonial-item font-medium">
@@ -227,15 +227,13 @@
                             </div>
                             <div class="testimonial-item font-medium">
                                 <span class="flaticon-right-quote quote-icon flat-medium text-primary"></span>
-                                <p>Hendrerit dapibus natoque class taciti, egestas orci dis dictumst duis platea penatibus. Pretium fusce. Nullam. Dui nec purus nam. Aenean quam nulla mauris primis mi blandit turpis nulla. Blandit suscipit eleifend dignissim
-                                    ac faucibus. Ad primis nisl scelerisque rutrum. Fusce, sapien interdum inceptos, amet maecenas augue platea Tincidunt magnis nostra, sit imperdiet porttitor consectetuer.</p>
-                                <span class="name text-secondary h6 font-weight-medium mt-4 d-table">Gilbert E. Lyons, CEO Unicoder</span>
+                                <p>Investissez malin à Marrakech ! FIMAC Atlantis vous garantit un cadre idéal, une forte demande locative et un rendement sûr. Saisissez cette opportunité !</p>
+                                <span class="name text-secondary h6 font-weight-medium mt-4 d-table">Laacher</span>
                             </div>
                             <div class="testimonial-item font-medium">
                                 <span class="flaticon-right-quote quote-icon flat-medium text-primary"></span>
-                                <p>Hendrerit dapibus natoque class taciti, egestas orci dis dictumst duis platea penatibus. Pretium fusce. Nullam. Dui nec purus nam. Aenean quam nulla mauris primis mi blandit turpis nulla. Blandit suscipit eleifend dignissim
-                                    ac faucibus. Ad primis nisl scelerisque rutrum. Fusce, sapien interdum inceptos, amet maecenas augue platea Tincidunt magnis nostra, sit imperdiet porttitor consectetuer.</p>
-                                <span class="name text-secondary h6 font-weight-medium mt-4 d-table">Gilbert E. Lyons, CEO Unicoder</span>
+                                <p>Misez sur l'avenir avec un investissement sûr à Marrakech !  Prenez une longueur d'avance avec un placement rentable et sécurisé !</p>
+                                <span class="name text-secondary h6 font-weight-medium mt-4 d-table">Laacher</span>
                             </div>
                         </div>
                     </div>
@@ -290,13 +288,13 @@
                                             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                                     </div>
                                 </div> --}}
-                                <div class="ac-card">
+                                {{-- <div class="ac-card">
                                     <a class="ac-toggle text-dark text-truncate" href="#">User Experience and Brand Strategy</a>
                                     <div class="ac-collapse">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
                                             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
