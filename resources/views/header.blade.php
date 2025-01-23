@@ -11,7 +11,7 @@
     <meta name="google-site-verification" content="oKUogvjmGsNKW_KL4M4i6PHvFlGUsmsUEO0Ho17Yp1A" />
     <title>Fimac Atlantis - Acceuil</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo/fimaclogo3.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/fimaclogo3.ico') }}">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
