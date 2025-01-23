@@ -6,13 +6,7 @@
                 <div class="row">
                     <div class="col">
                         <h3 class="text-secondary">Residence Riyad </h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-0 bg-transparent p-0">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Listing</a></li>
-                                <li class="breadcrumb-item active text-primary" aria-current="page">Grid View</li>
-                            </ol>
-                        </nav>
+                        
                     </div>
                 </div>
             </div>
