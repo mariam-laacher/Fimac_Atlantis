@@ -67,9 +67,9 @@
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#"> Nos Projet</a>
                                             <ul class="dropdown-menu">
-                                                <li class="dropdown"> <a class="dropdown-toggle dropdown-item" href="property-grid-v1.html">Projet Haut Standing</a>
+                                                <li class="dropdown"> <a class="dropdown-toggle dropdown-item" href="{{route('residence')}}">Projet Haut Standing</a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="{{route('riyad')}}">Residence Riadh</a></li>
+                                                        <li><a class="dropdown-item" href="{{route('riyad')}}">Residence Riyad</a></li>
                                                         <li><a class="dropdown-item" href="{{route('medinova')}}">Residence Medinova </a></li>
                                                     </ul>
                                                 </li>

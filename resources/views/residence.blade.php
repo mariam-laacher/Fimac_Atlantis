@@ -1,11 +1,12 @@
-<title>Fimac Atlantis - Residence Medinova </title>
+<title>Fimac Atlantis - Residences </title>
 @include('header2')
+
  <!--============== Page title Start ==============-->
  <div class="full-row py-5">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="text-secondary">Residence Riyad </h3>
+                <h3 class="text-secondary">Residences  </h3>
                 
             </div>
         </div>
@@ -20,7 +21,7 @@
             <div class="col-xl-4 col-lg-5">
                 <div class="listing-sidebar">
                     <div class="widget advance_search_widget">
-                        <h5 class="mb-30">Search Property</h5>
+                        <h5 class="mb-30">Rechercher un appartement </h5>
                         <form class="rounded quick-search form-icon-right" action="#" method="post">
                             <div class="row g-3">
                                 <div class="col-12">
@@ -28,7 +29,7 @@
                                 </div>
                                 <div class="col-12">
                                     <select class="form-control">
-                                        <option>Property Types</option>
+                                        <option>Type d'appartements </option>
                                         <option>House</option>
                                         <option>Office</option>
                                         <option>Appartment</option>
@@ -927,6 +928,5 @@
     </div>
 </div>
 <!--============== Property Grid View End ==============-->
-
 
 @include('footer')
