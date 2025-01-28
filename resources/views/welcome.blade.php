@@ -103,55 +103,46 @@
                             <div class="me-auto">
                                 <h2 class="d-table">Découvrez nos appartements à Marrakech</h2>
                             </div>
-                            {{-- <a href="property-grid-v1.html" class="btn-link text-secondary hover-text-primary transation ms-auto">More Deals</a> --}}
-                        </div>
-                    </div>
-                </div> <center>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="3block-carusel nav-disable owl-carousel">
-                            <div class="item">
-                                <div class="property-grid-2 property-block transation">
-                                    <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
-                                        <div class="cata position-absolute">
-                                            {{-- <span class="sale bg-secondary text-white">For Sale</span> --}}
-                                        </div>
-                                        <a href="{{route('riyad')}}"><img src="assets/images/property_grid/residenceRyad.png" alt="Image Not Found!"></a>
-                                        
-                                        <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
-                                            <div class="agent">
-                                                <a href="#" class="d-flex text-general align-items-center"><img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata"><span>Residence Riyad</span></a>
-                                            </div>
-                                            {{-- <div class="post-date ms-auto"><span>2 Month Ago</span></div> --}}
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="property-grid-2 property-block transation">
-                                    <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
-                                        <div class="cata position-absolute">
-                                            {{-- <span class="sale bg-secondary text-white">For Sale</span> --}}
-                                        </div>
-                                        <a href="{{route('medinova')}}"><img src="assets/images/property_grid/property-grid-6.png" alt="Image Not Found!"></a>
-                                        <ul class="position-absolute quick-meta">
-
-                                        </ul>
-                                        <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
-                                            <div class="agent">
-                                                <a href="#" class="d-flex text-general align-items-center"><img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata"><span>Residence Medinova</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Center the row content horizontally and ensure the carousel container is centered -->
+                <div class="row justify-content-center"> 
+                    <div class="col-12">
+                        <div class="3block-carusel nav-disable owl-carousel" style="display: flex; justify-content: center;">
+                            @foreach($subCategories as $subCategory)
+                                @if($subCategory->status == 'active')  <!-- Only display active subcategories -->
+                                    <div class="item" style="flex-shrink: 0; margin-right: 10px;"> <!-- Ensure items don't shrink and have space between them -->
+                                        <div class="property-grid-2 property-block transation">
+                                            <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
+                                                <div class="cata position-absolute">
+                                                    {{-- <span class="sale bg-secondary text-white">For Sale</span> --}}
+                                                </div>
+                                                <a href="{{ route('riyad') }}">
+                                                    <!-- Set a fixed size for all images -->
+                                                    <img src="{{ asset('storage/' . $subCategory->image) }}" alt="Image Not Found!" style="width: 100%; height: 400px; object-fit: cover;">
+                                                </a>
+        
+                                                <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
+                                                    <div class="agent">
+                                                        <a href="#" class="d-flex text-general align-items-center">
+                                                            <img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata">
+                                                            <span>{{ $subCategory->name }}</span>  <!-- Display the subcategory name -->
+                                                        </a>
+                                                    </div>
+                                                    {{-- <div class="post-date ms-auto"><span>2 Month Ago</span></div> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>                        
+                    </div>
+                </div>                
             </div>
-        </div></center>
+        </div>        
         <!--============== Recent Property Start ==============-->
         <div class="full-row bg-light">
             <div class="container">
@@ -159,7 +150,7 @@
                     <div class="col mb-4">
                         <div class="align-items-center d-flex">
                             <div class="me-auto">
-                                <h2 class="d-table"> nos appartements   </h2>
+                                <h2 class="d-table">Nos appartements</h2>
                             </div>
                             <a href="property-grid-v1.html" class="ms-auto btn-link">Tous voir</a>
                         </div>

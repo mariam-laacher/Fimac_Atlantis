@@ -13,8 +13,10 @@
     <meta name="author" content="unicoder">
     <title>@yield('title', 'Fimac Atlentis')</title>
     <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/logo/fimaclogo3-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/logo/fimaclogo3-16x16.png') }}">
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/fimaclogo3.ico') }}">
-
+    
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
