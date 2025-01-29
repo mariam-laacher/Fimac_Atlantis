@@ -121,7 +121,7 @@
                                                 </div>
                                                 <a href="{{ route('riyad') }}">
                                                     <!-- Set a fixed size for all images -->
-                                                    <img src="{{ asset('storage/' . $subCategory->image) }}" alt="Image Not Found!" style="width: 100%; height: 400px; object-fit: cover;">
+                                                    <img src="{{ asset($subCategory->image) }}" alt="Image Not Found!" style="width: 100%; height: 400px; object-fit: cover;">
                                                 </a>
         
                                                 <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
