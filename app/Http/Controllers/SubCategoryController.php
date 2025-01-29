@@ -32,7 +32,10 @@ class SubCategoryController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('sub_categories', 'public');
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('sub_categorie'), $imageName);
+            $validated['image'] = 'sub_categorie/' . $imageName;
         }
 
         SubCategory::create($validated);
@@ -59,14 +62,18 @@ class SubCategoryController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            // Delete old image if exists
-            if ($subCategory->image) {
-                Storage::disk('public')->delete($subCategory->image);
+            // Supprimer l'ancienne image si elle existe
+            if ($subCategory->image && file_exists(public_path($subCategory->image))) {
+                unlink(public_path($subCategory->image));
             }
 
-            // Store the new image
-            $validated['image'] = $request->file('image')->store('sub_categories', 'public');
+            // Enregistrer la nouvelle image
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('sub_categorie'), $imageName);
+            $validated['image'] = 'sub_categorie/' . $imageName;
         }
+
 
         $subCategory->update($validated);
 
@@ -76,8 +83,8 @@ class SubCategoryController extends Controller
 
     public function destroy(SubCategory $subCategory)
     {
-        if ($subCategory->image) {
-            Storage::disk('public')->delete($subCategory->image);
+        if ($subCategory->image && file_exists(public_path($subCategory->image))) {
+            unlink(public_path($subCategory->image));
         }
 
         $subCategory->delete();

@@ -39,8 +39,12 @@ class CategoryController extends Controller
 
         $imagePath = null;
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('categorie', 'public');
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('categorie'), $imageName);
+            $imagePath = 'categorie/' . $imageName;
         }
+
 
         $category = new Category;
         $category->name = $request->input('name');
@@ -86,10 +90,14 @@ class CategoryController extends Controller
         $imagePath = $category->image;
 
         if ($request->hasFile('image')) {
-            if ($category->image) {
-                Storage::disk('public')->delete($category->image);
+            if ($category->image && file_exists(public_path($category->image))) {
+                unlink(public_path($category->image));
             }
-            $imagePath = $request->file('image')->store('categorie', 'public');
+
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('categorie'), $imageName);
+            $imagePath = 'categorie/' . $imageName;
         }
 
         $category->update([

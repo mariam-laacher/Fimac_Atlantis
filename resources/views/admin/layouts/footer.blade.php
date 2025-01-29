@@ -28,6 +28,8 @@
 <script src="{{ asset('adminAssets/js/scrollbar/custom.js') }}"></script>
 <!-- Sidebar jquery-->
 <script src="{{ asset('adminAssets/js/config.js') }}"></script>
+<script src="{{ asset('adminAssets/js/sidebar-menu.js') }}"></script>
+<script src="{{ asset('adminAssets/js/sidebar-pin.js') }}"></script>
 
 <!-- Theme js-->
 <script src="{{ asset('adminAssets/js/script.js') }}"></script>

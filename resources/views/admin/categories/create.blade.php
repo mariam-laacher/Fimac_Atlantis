@@ -31,26 +31,11 @@
                 @csrf
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col sm-6">
                         <div class="mb-3">
                             <label>Nom de la catégorie</label>
                             <input class="form-control" type="text" name="name" placeholder="Nom de la catégorie *" value="{{ old('name') }}" required>
                             @error('name')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="mb-3">
-                            <label>Type de catégorie</label>
-                            <select class="form-select" name="type" required>
-                                <option value="General" {{ old('type') == 'General' ? 'selected' : '' }}>Général</option>
-                                <option value="Special" {{ old('type') == 'Special' ? 'selected' : '' }}>Spécial</option>
-                            </select>                  
-                            @error('type')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -67,9 +52,8 @@
                               @enderror
                           </div>
                       </div>
-                  </div>
-  
-                  <div class="row">
+                </div>
+                <div class="row">
                       <div class="col">
                           <div class="mb-3">
                               <label>Description</label>
@@ -79,7 +63,7 @@
                               @enderror
                           </div>
                       </div>
-                  </div>
+                </div>
   
                   <!-- Remplacer Dropzone par un input file standard -->
                   <div class="row">
