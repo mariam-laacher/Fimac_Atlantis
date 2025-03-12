@@ -80,7 +80,7 @@
                             <label>Importer une image de la sous-catégorie</label>
                             <input type="file" class="form-control" name="image" id="imageInput" accept=".jpg, .jpeg, .png" onchange="previewImage(event)">
                             <div id="imagePreviewContainer" style="margin-top: 10px; {{ $subCategory->image ? '' : 'display: none;' }}">
-                                <img id="imagePreview" src="{{ $subCategory->image ? asset('storage/' . $subCategory->image) : '#' }}" alt="Aperçu de l'image" style="max-height: 200px; border: 1px solid #ddd; padding: 5px; display: block;">
+                                <img id="imagePreview" src="{{ $subCategory->image ? asset($subCategory->image) : '#' }}" alt="Aperçu de l'image" style="max-height: 200px; border: 1px solid #ddd; padding: 5px; display: block;">
                                 <button type="button" class="btn btn-danger btn-sm mt-2" onclick="removeImage()">Supprimer l'image</button>
                             </div>
                             @error('image')
