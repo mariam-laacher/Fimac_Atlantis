@@ -11,7 +11,7 @@
                     <img width="1920" height="960" src="assets/images/slider/1.png" class="ls-bg" alt="" />
                     <p style="font-size:48px; font-weight:700; top:370px; left:50%; font-family: 'Sen', sans-serif;" class="ls-l ls-hide-phone text-white" data-ls="offsetyin:100%; durationin:1500; delayin:1000; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Residence Riyad</p>
                     <p style="top:450px; left:50%; text-align:center; font-weight:400; font-style:normal; text-decoration:none; width:650px; font-size:18px; color:#ffffff; line-height:30px; white-space:normal;" class="ls-l ls-hide-phone" data-ls="offsetyin:100%; durationin:1500; delayin:1500; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Profitez d'un cadre de vie harmonieux, des commodités haut de gamme et parfaitement conçus pour votre bien-être</p>
-                    <a style="" class="ls-l ls-hide-phone" href="property-grid-v1.html" target="_self" data-ls="offsetyin:40; delayin:2000; clipin:0 0 100% 0; durationout:400; hover:true; hoverdurationin:300; hoveropacity:1; hoverbgcolor:#222; hovercolor:#aa8453;">
+                    <a style="" class="ls-l ls-hide-phone" href="{{route('riyad')}}" target="_self" data-ls="offsetyin:40; delayin:2000; clipin:0 0 100% 0; durationout:400; hover:true; hoverdurationin:300; hoveropacity:1; hoverbgcolor:#222; hovercolor:#aa8453;">
                         <p style="font-weight:500; text-align:center; cursor:pointer; padding-right:35px; padding-left:35px; font-weight: 500; font-size:16px; font-family: 'Sen', sans-serif; line-height:40px; top:550px; left:50%; color:#fff; border-radius:30px; padding-top:10px; padding-bottom:10px; background:#aa8453; white-space:normal;" class="">Trouvez votre appartement idéal</p>
                     </a>
                 </div>
@@ -21,7 +21,7 @@
                     <img width="1920" height="960" src="assets/images/slider/14.png" class="ls-bg" alt="" />
                     <p style="font-size:48px; font-weight:700; top:370px; left:50%; font-family: 'Sen', sans-serif;" class="ls-l ls-hide-phone text-white" data-ls="offsetyin:100%; durationin:1500; delayin:1000; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Residence Medinova</p>
                     <p style="top:450px; left:50%; text-align:center; font-weight:400; font-style:normal; text-decoration:none; width:650px; font-size:18px; color:#ffffff; line-height:30px; white-space:normal;" class="ls-l ls-hide-phone" data-ls="offsetyin:100%; durationin:1500; delayin:1500; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Allie modernité et confort pour répondre à toutes vos attentes.</p>
-                    <a style="" class="ls-l ls-hide-phone" href="property-grid-v1.html" target="_self" data-ls="offsetyin:40; delayin:2000; clipin:0 0 100% 0; durationout:400; hover:true; hoverdurationin:300; hoveropacity:1; hoverbgcolor:#222; hovercolor:#aa8453;">
+                    <a style="" class="ls-l ls-hide-phone" href="{{route('medinova')}}" target="_self" data-ls="offsetyin:40; delayin:2000; clipin:0 0 100% 0; durationout:400; hover:true; hoverdurationin:300; hoveropacity:1; hoverbgcolor:#222; hovercolor:#aa8453;">
                         <p style="font-weight:500; text-align:center; cursor:pointer; padding-right:35px; padding-left:35px; font-weight: 500; font-size:16px; font-family: 'Sen', sans-serif; line-height:40px; top:550px; left:50%; color:#fff; border-radius:30px; padding-top:10px; padding-bottom:10px; background:#aa8453; white-space:normal;" class="">Trouver votre appartement idéal</p>
                     </a>
                 </div>
@@ -742,72 +742,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <span class="pb-2 d-table w-50 w-sm-100 text-primary m-auto text-center tagline"> nos derniers post</span>
                         <h2 class="down-line w-50 w-sm-100 mx-auto text-center mb-5">Exprimez ce que nous pensons, partagez ce que nous faisons.</h2>
                     </div>
                 </div>
-                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
-                    <div class="col">
-                        <div class="thumb-blog-overlay bg-white hover-text-PushUpBottom mb-4">
-                            <div class="post-image position-relative overlay-secondary">
-                                <img src="assets/images/blog/1.png" alt="Image not found!">
-                                <div class="position-absolute xy-center">
-                                    <div class="overflow-hidden text-center">
-                                        <a class="text-white first-push-up transation font-large" href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-content p-35">
-                                <h5 class="d-block font-400 mb-3"><a href="#" class="transation text-dark hover-text-primary">Our latest development projects by more efficie.</a></h5>
-                                <p>Nostra maecenas malesuada vel lobortis sociis mus aliquam tempor etiam ipsum pretium cursus.</p>
-                                <div class="post-meta text-uppercase">
-                                    <a href="#"><span>By Fimac Atlantis</span></a>
-                                    <a href="#"><span>Dec 25, 2019</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- <div class="col">
-                        <div class="thumb-blog-overlay bg-white hover-text-PushUpBottom mb-4">
-                            <div class="post-image position-relative overlay-secondary">
-                                <img src="assets/images/blog/2.png" alt="Image not found!">
-                                <div class="position-absolute xy-center">
-                                    <div class="overflow-hidden text-center">
-                                        <a class="text-white first-push-up transation font-large" href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-content p-35">
-                                <h5 class="d-block font-400 mb-3"><a href="#" class="transation text-dark hover-text-primary">Cultivating market leadership from the inside.</a></h5>
-                                <p>Nostra maecenas malesuada vel lobortis sociis mus aliquam tempor etiam ipsum pretium cursus.</p>
-                                <div class="post-meta text-uppercase">
-                                    <a href="#"><span>By Robert Haven</span></a>
-                                    <a href="#"><span>Dec 25, 2019</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="thumb-blog-overlay bg-white hover-text-PushUpBottom mb-4">
-                            <div class="post-image position-relative overlay-secondary">
-                                <img src="assets/images/blog/3.png" alt="Image not found!">
-                                <div class="position-absolute xy-center">
-                                    <div class="overflow-hidden text-center">
-                                        <a class="text-white first-push-up transation font-large" href="#">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-content p-35">
-                                <h5 class="d-block font-400 mb-3"><a href="#" class="transation text-dark hover-text-primary">We are the next generation of the advertising.</a></h5>
-                                <p>Nostra maecenas malesuada vel lobortis sociis mus aliquam tempor etiam ipsum pretium cursus.</p>
-                                <div class="post-meta text-uppercase">
-                                    <a href="#"><span>By Robert Haven</span></a>
-                                    <a href="#"><span>Dec 25, 2019</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                </div>
+                
             </div>
         </div>
         <!--============== Blog Section End ==============-->

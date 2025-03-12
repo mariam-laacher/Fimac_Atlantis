@@ -65,7 +65,7 @@
         <!--============== Features End ==============-->
 
         <!--============== Banner Start ==============-->
-        <div class="full-row paraxify" style="background-image: url(assets/images/background/bg-4.png); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+        <div class="full-row paraxify"  style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/background/image.png); background-repeat: no-repeat; background-position: center center; background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-8">
@@ -244,16 +244,7 @@
 
         <!--============== Accordian Start ==============-->
         <div class="full-row bg-light pb-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5">
-                        <div class="text-secondary mb-lg-5">
-                            <span class="tagline-2 text-primary">Capabilities</span>
-                            <h2 class="text-secondary mb-4">Creative studio with art & technologies.</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="container-fluid">
                 <div class="row row-cols-xl-2 row-cols-1">
                     <div class="col px-0"><img src="assets/images/logo/fimaclogo3.png" alt="image not found"></div>
