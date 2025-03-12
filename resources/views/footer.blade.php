@@ -27,7 +27,7 @@
                     <ul>
                         <li>Adresse de notre société :Citrine A immeuble 8 bureau 3 1er étage</li>
                         <a href="https://wa.me/212660114297" target="_blank">   <li>+212 660-114297</li></a>
-                        <li>fimac.atlantis@gmail.com</li>
+                        <li><a href="mailto:fimac.atlantis@gmail.com">fimac.atlantis@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                 <div class="footer-widget footer-nav mb-4">
                     <h3 class="widget-title mb-4">Nos appartements</h3>
                     <ul>
-                        <li><a href="#">Appartements standars</a></li>
+                        <li><a href="#">Studio</a></li>
                         <li><a href="#">Appartements Duplex</a></li>
                         <li><a href="#">Appartements avec Terrasse</a></li>
                         

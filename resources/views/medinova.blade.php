@@ -41,7 +41,7 @@
                                 <div class="col-12">
                                     <select class="form-control">
                                         <option>Type d'appartements </option>
-                                        <option>Standars</option>
+                                        <option>Studio</option>
                                         <option>Duplex </option>
                                         <option>Avec terrasse</option>
                                         
