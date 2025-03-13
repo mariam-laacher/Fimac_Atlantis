@@ -169,7 +169,7 @@
                                         <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
                                             @if ($appartement->images->isNotEmpty())
                                                 <a href="{{ route('appartements.show', $appartement->id) }}">
-                                                    <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement">
+                                                    <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement" style="width: 100%; height: 400px; object-fit: cover;">
                                                 </a>
                                             @else
                                                 <p>Aucune image disponible.</p>
