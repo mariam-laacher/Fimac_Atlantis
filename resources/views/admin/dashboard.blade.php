@@ -138,7 +138,7 @@
                   </div>
                 </div>
               </div> --}}
-              {{-- <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
+              <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
                 <div class="card">
                   <div class="card-header custom-border-bottom">
                     <div class="header-top"> 
@@ -157,7 +157,7 @@
                     <div id="salesStatsRadialChart"> </div>
                   </div>
                 </div>
-              </div> --}}
+              </div>
               {{-- <div class="col-xl-6 col-md-6 proorder-md-5"> 
                 <div class="card latest-sales">
                   <div class="card-header d-flex justify-content-between align-items-center custom-border-bottom">
