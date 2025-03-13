@@ -63,7 +63,7 @@
                       <td>{{ $category->name }}</td>
                       <td>
                         @if($category->image)
-                        <img src="{{ asset($category->image) }}" alt="Image de la catégorie" style="width: 80px; height: 80px; object-fit: cover;">
+                        <img src="{{ asset($category->image) }}" alt="Image de la catégorie" style="width: 80px; height: 80px; object-fit: cover; margin: 5px; border-radius: 5px;">
                         @else
                           <span>Aucune image</span>
                         @endif

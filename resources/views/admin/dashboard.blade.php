@@ -30,16 +30,19 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid default-dashboard"> 
             <div class="row">
-              <div class="col-xl-6 box-col-7 proorder-md-1"> 
-                <div class="card">
-                  <div class="card-body premium-card">
-                    <div class="row premium-courses-card">
-                      <div class="col-md-5 premium-course">
-                        <h1 class="f-w-700">Get Thousands Premium Courses.</h1><span class="f-light f-w-400 f-14">Upgrade to watch, play, learn, make and discover. </span><a class="btn btn-square btn-primary f-w-700" href="pricing.html">Go Premium</a>
-                      </div>
-                      <div class="col-md-7 premium-course-img"> 
-                        <div class="premium-message"><img class="img-fluid" src="{{ asset('adminAssets/images/dashboard/massage.gif') }}" alt="massage"></div>
-                        <div class="premium-books"><img class="img-fluid" src="{{ asset('adminAssets/images/dashboard/books.gif') }}" alt="books"></div>
+              <div class="xl-50 col-xl-7 col-lg-12">
+                <div class="small-chart-widget chart-widgets-small">
+                  <div class="card">
+                    <div class="card-header pb-0">
+                      <h4>Live Products</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="chart-container">
+                        <div class="row">
+                          <div class="col-12">
+                            <div id="chart-widget6"></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -138,7 +141,7 @@
                   </div>
                 </div>
               </div> --}}
-              <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
+              {{-- <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
                 <div class="card">
                   <div class="card-header custom-border-bottom">
                     <div class="header-top"> 
@@ -157,7 +160,7 @@
                     <div id="salesStatsRadialChart"> </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               {{-- <div class="col-xl-6 col-md-6 proorder-md-5"> 
                 <div class="card latest-sales">
                   <div class="card-header d-flex justify-content-between align-items-center custom-border-bottom">
