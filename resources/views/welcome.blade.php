@@ -187,7 +187,23 @@
                                             <ul class="d-flex quantity font-fifteen justify-content-center align-items-center">
                                                 <li title="Baths"><span><i class="fa-solid fa-shower"></i></span> {{ $appartement->sdb > 0 ? 'Oui' : 'Non' }}</li>
                                                 <li title="Bathroom"><span><i class="fa-solid fa-toilet"></i></span> {{ $appartement->wc > 0 ? 'Oui' : 'Non' }}</li>                                                                                                <li title="Area"><span><i class="fa-solid fa-vector-square"></i></span> {{ $appartement->surface }} m²</li>
-                                                <li title="Level"><span><i class="fa-solid fa-layer-group"></i></span> {{ $appartement->niveau }}</li>
+                                                <li title="Level">
+                                                    <span><i class="fa-solid fa-layer-group"></i></span>
+                                                    @if($appartement->niveau == 'rdc')
+                                                        RDC
+                                                    @elseif($appartement->niveau == 'mezzanine')
+                                                        Mezzanine
+                                                    @elseif($appartement->niveau == '1er_etage')
+                                                        1er
+                                                    @elseif($appartement->niveau == '2eme_etage')
+                                                        2ème
+                                                    @elseif($appartement->niveau == '3eme_etage')
+                                                        3ème
+                                                    @else
+                                                        {{ $appartement->niveau }}
+                                                    @endif
+                                                </li>
+                                                
                                                 <li title="Kitchen"><span><i class="fa-solid fa-utensils"></i></span> {{ $appartement->cuisine > 0 ? 'Yes' : 'No' }}</li>                                                                                            
                                             </ul>                                                
                                         </div>
