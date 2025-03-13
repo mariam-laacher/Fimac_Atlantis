@@ -162,78 +162,49 @@
                 <div class="row">
                     <div class="col">
                         <div class="3block-carusel nav-disable owl-carousel">
-                            <div class="item">
-                                <!-- Property Grid -->
-                                <div class="property-grid-1 property-block bg-white transation-this">
-                                    <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
-                                        {{-- <div class="cata position-absolute"><span class="sale bg-secondary text-white">For Sale</span></div> --}}
-                                        <a href="property-single-v1.html"><img src="assets/images/property_grid/duplexRyad.png" alt="Image Not Found!"></a>
-                                        <a href="#" class="listing-ctg text-white"><i class="fa-solid fa-building"></i><span>Apartment Duplex</span></a>
-                                        <ul class="position-absolute quick-meta">
-                                            {{-- <li><a href="#" title="Add Compare"><i class="flaticon-transfer flat-mini"></i></a></li>
-                                            <li><a href="#" title="Add Favourite"><i class="flaticon-like-1 flat-mini"></i></a></li> --}}
-                                            {{-- <li class="md-mx-none"><a class="quick-view" href="#quick-view" title="Quick View"><i class="flaticon-zoom-increasing-symbol flat-mini"></i></a></li> --}}
-                                        </ul>
-                                    </div>
-                                    <div class="property_text p-4">
-                                        {{-- <span class="listing-price">$1850<small> ( Monthly )</small></span> --}}
-                                        {{-- <h5 class="listing-title"><a href="property-single-v1.html">Family House Residense</a></h5> --}}
-                                        {{-- <span class="listing-location"><i class="fas fa-map-marker-alt"></i> 4213 South Burlington, VT 05403</span> --}}
-                                        <ul class="d-flex quantity font-fifteen justify-content-center align-items-center">
-                                            <li title="Rooms"><span><i class="fa-solid fa-door-open"></i></span> 1</li>
-                                            <li title="Baths"><span><i class="fa-solid fa-shower"></i></span> 1</li>
-                                            <li title="Bathroom"><span><i class="fa-solid fa-toilet"></i></span> 2</li>
-                                            <li title="Area"><span><i class="fa-solid fa-vector-square"></i></span> 81,16 m²</li>
-                                            <li title="Climatisation"><span><i class="fa-solid fa-fan"></i></span> Yes</li>
-                                        </ul>                                                                             
-                                    </div>
-                                    <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
-                                        <div class="agent">
-                                            <a href="#" class="d-flex text-general align-items-center"><img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata"><span>Residence Riyad</span></a>
+                            @foreach ($appartements as $appartement)
+                                <div class="item">
+                                    <!-- Property Grid -->
+                                    <div class="property-grid-1 property-block bg-white transation-this">
+                                        <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
+                                            @if ($appartement->images->isNotEmpty())
+                                                <a href="{{ route('appartements.show', $appartement->id) }}">
+                                                    <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement">
+                                                </a>
+                                            @else
+                                                <p>Aucune image disponible.</p>
+                                            @endif
+
+                                            <a href="#" class="listing-ctg text-white" style="background-color: #aa8453; padding-left: 12px; padding-right: 12px;">
+                                                <i class="fa-solid fa-building" style="color: white;"></i><span> {{ $appartement->designation }} </span>
+                                            </a>
+
+                                            <ul class="position-absolute quick-meta">
+                                                <!-- Tu peux ajouter des liens ou des boutons ici -->
+                                            </ul>
                                         </div>
-                                        {{-- <div class="post-date ms-auto"><span>2 Month Ago</span></div> --}}
+                                        <div class="property_text p-4">
+                                            <ul class="d-flex quantity font-fifteen justify-content-center align-items-center">
+                                                <li title="Baths"><span><i class="fa-solid fa-shower"></i></span> {{ $appartement->sdb > 0 ? 'Oui' : 'Non' }}</li>
+                                                <li title="Bathroom"><span><i class="fa-solid fa-toilet"></i></span> {{ $appartement->wc > 0 ? 'Oui' : 'Non' }}</li>                                                                                                <li title="Area"><span><i class="fa-solid fa-vector-square"></i></span> {{ $appartement->surface }} m²</li>
+                                                <li title="Level"><span><i class="fa-solid fa-layer-group"></i></span> {{ $appartement->niveau }}</li>
+                                                <li title="Kitchen"><span><i class="fa-solid fa-utensils"></i></span> {{ $appartement->cuisine > 0 ? 'Yes' : 'No' }}</li>                                                                                            
+                                            </ul>                                                
+                                        </div>
+                                        <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
+                                            <div class="agent">
+                                                <a href="#" class="d-flex text-general align-items-center">
+                                                    <img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avatar">
+                                                    <span style="color: #aa8453;">{{ $appartement->subcategory->name }}</span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                           
-                            {{-- <div class="item">
-                                <!-- Property Grid -->
-                                <div class="property-grid-1 property-block bg-white transation-this">
-                                    <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
-                                        <div class="cata position-absolute">
-                                            <span class="sale bg-secondary text-white">For Sale</span>
-                                            <span class="featured bg-primary text-white">Featured</span>
-                                        </div>
-                                        <a href="property-single-v1.html"><img src="assets/images/property_grid/property-grid-2.png" alt="Image Not Found!"></a>
-                                        <a href="#" class="listing-ctg text-white"><i class="fa-solid fa-building"></i><span>Condos</span></a>
-                                        <ul class="position-absolute quick-meta">
-                                            <li><a href="#" title="Add Compare"><i class="flaticon-transfer flat-mini"></i></a></li>
-                                            <li><a href="#" title="Add Favourite"><i class="flaticon-like-1 flat-mini"></i></a></li>
-                                            <li class="md-mx-none"><a class="quick-view" href="#quick-view" title="Quick View"><i class="flaticon-zoom-increasing-symbol flat-mini"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="property_text p-4">
-                                        <span class="listing-price">$100,8850<small> ( One Time )</small></span>
-                                        <h5 class="listing-title"><a href="property-single-v1.html">Luxury Condos</a></h5>
-                                        <span class="listing-location"><i class="fas fa-map-marker-alt"></i> 2305 Frog Lane Overlandpk, MO 66210</span>
-                                        <ul class="d-flex quantity font-fifteen">
-                                            <li title="Beds"><span><i class="fa-solid fa-bed"></i></span>7</li>
-                                            <li title="Baths"><span><i class="fa-solid fa-shower"></i></span>5</li>
-                                            <li title="Area"><span><i class="fa-solid fa-vector-square"></i></span>1200 Sqft</li>
-                                            <li title="Gas"><span><i class="fa-solid fa-fire"></i></span>Yes</li>
-                                        </ul>
-                                    </div>
-                                    <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
-                                        <div class="agent">
-                                            <a href="#" class="d-flex text-general align-items-center"><img class="rounded-circle me-2" src="assets/images/team/1.jpg" alt="avata"><span>Ali Tufan</span></a>
-                                        </div>
-                                        <div class="post-date ms-auto"><span>2 Month Ago</span></div>
-                                    </div>
-                                </div>
-                            </div> --}}
+                            @endforeach
                         </div>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
         <!--============== Recent Property End ==============-->
