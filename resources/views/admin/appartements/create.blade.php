@@ -117,12 +117,12 @@
                     <div class="col-sm-6">
                         <div class="mb-3">
                             <label>Chambre 1</label>
-                            <select class="form-select" name="chambre1" required>
+                            <select class="form-select" name="chambre_1" required>
                                 <option value="" disabled selected>Sélectionner</option>
-                                <option value="0" {{ old('chambre1') == '0' ? 'selected' : '' }}>Non</option>
-                                <option value="1" {{ old('chambre1') == '1' ? 'selected' : '' }}>Oui</option>
+                                <option value="0" {{ old('chambre_1') == '0' ? 'selected' : '' }}>Non</option>
+                                <option value="1" {{ old('chambre_1') == '1' ? 'selected' : '' }}>Oui</option>
                             </select>                            
-                            @error('chambre1')
+                            @error('chambre_1')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -130,12 +130,12 @@
                     <div class="col-sm-6">
                         <div class="mb-3">
                             <label>Chambre 2</label>
-                            <select class="form-select" name="chambre2" required>
+                            <select class="form-select" name="chambre_2" required>
                                 <option value="" disabled selected>Sélectionner</option>
-                                <option value="0" {{ old('chambre2') == '0' ? 'selected' : '' }}>Non</option>
-                                <option value="1" {{ old('chambre2') == '1' ? 'selected' : '' }}>Oui</option>
+                                <option value="0" {{ old('chambre_2') == '0' ? 'selected' : '' }}>Non</option>
+                                <option value="1" {{ old('chambre_2') == '1' ? 'selected' : '' }}>Oui</option>
                             </select>                            
-                            @error('chambre2')
+                            @error('chambre_2')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -203,20 +203,20 @@
                     <div class="col-sm-6">
                         <div class="mb-3">
                             <label>Sous-catégorie</label>
-                            <select class="form-select" name="sous_categorie" required>
+                            <select class="form-select" name="sub_category_id" required>
                                 <option value="" disabled selected>Sélectionner</option>
                                 @foreach($subcategories as $subcategory)
-                                    <option value="{{ $subcategory->id }}" {{ old('sous_categorie') == $subcategory->id ? 'selected' : '' }}>
+                                    <option value="{{ $subcategory->id }}" {{ old('sub_category_id') == $subcategory->id ? 'selected' : '' }}>
                                         {{ $subcategory->name }} 
                                     </option>
                                 @endforeach
                             </select> 
-                            @error('sous_categorie')
+                            @error('sub_category_id')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                    </div>
-                </div>
+                    </div>                    
+                </div>                
                 <!-- Champ pour l'image -->
                 <div class="row">
                     <div class="col">
@@ -253,30 +253,40 @@
 @include('admin.layouts.footer')
 
 <script>
-    function previewImage(event) {
+    function previewImages(event) {
         const fileInput = event.target;
-        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
-        const imagePreview = document.getElementById('imagePreview');
+        const imagePreviewsContainer = document.getElementById('imagePreviews');
+        const previewContainer = document.getElementById('imagePreviewContainer');
+        
+        imagePreviewsContainer.innerHTML = ''; // Nettoyer l'aperçu précédent
 
-        if (fileInput.files && fileInput.files[0]) {
-            const reader = new FileReader();
+        if (fileInput.files.length > 0) {
+            previewContainer.style.display = 'block';
 
-            reader.onload = function(e) {
-                imagePreview.src = e.target.result;
-                imagePreviewContainer.style.display = 'block';
-            };
-
-            reader.readAsDataURL(fileInput.files[0]);
+            Array.from(fileInput.files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = e.target.result;
+                    imgElement.style.width = '100px';
+                    imgElement.style.height = '100px';
+                    imgElement.style.objectFit = 'cover';
+                    imgElement.style.margin = '5px';
+                    imgElement.style.borderRadius = '5px';
+                    
+                    imagePreviewsContainer.appendChild(imgElement);
+                };
+                reader.readAsDataURL(file);
+            });
+        } else {
+            previewContainer.style.display = 'none';
         }
     }
 
-    function removeImage() {
-        const fileInput = document.getElementById('imageInput');
-        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
-        const imagePreview = document.getElementById('imagePreview');
-
-        fileInput.value = '';
-        imagePreview.src = '#';
-        imagePreviewContainer.style.display = 'none';
+    function removeImages() {
+        document.getElementById('imageInput').value = '';
+        document.getElementById('imagePreviewContainer').style.display = 'none';
+        document.getElementById('imagePreviews').innerHTML = '';
     }
 </script>
+

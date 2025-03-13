@@ -48,20 +48,29 @@
               <table class="last-orders-table table text-center" id="last-orders">
                 <thead>
                   <tr>
+                    <th class="col-2">Image</th>
                     <th class="col-2">Niveau</th>
                     <th class="col-2">Désignation</th>
-                    <th class="col-3">Surface</th>
+                    <th class="col-2">Surface</th>
+                    <th class="col-2">Sous-Catégories</th>
                     <th class="col-2">Status</th>
-                    <th class="col-2">Date de Création</th>
                     <th class="col-2">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($appartements as $appartement)
                     <tr> 
+                      <td>
+                        @if ($appartement->images->isNotEmpty())
+                            <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement" width="100" height="100">
+                        @else
+                            <p>Aucune image disponible.</p>
+                        @endif
+                      </td>
                       <td>{{ $appartement->niveau }}</td>
                       <td>{{ $appartement->designation }}</td>
                       <td>{{ $appartement->surface }} m²</td>
+                      <td>{{ $appartement->subCategory ? $appartement->subCategory->name : 'N/A' }}</td>
                       <td>
                         @if($appartement->status === 'active')
                             <span class="badge bg-success">Active</span>
@@ -69,7 +78,6 @@
                             <span class="badge bg-danger">Inactive</span>
                         @endif
                       </td>
-                      <td>{{ $appartement->created_at->format('d M, Y') }}</td>
                       <td>
                         <div class="d-flex justify-content-end">
                           <!-- Icône Modifier -->

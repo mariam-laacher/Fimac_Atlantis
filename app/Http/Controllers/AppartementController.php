@@ -39,7 +39,7 @@ class AppartementController extends Controller
             'wc' => 'nullable|integer',
             'terrasse' => 'nullable|boolean',
             'status' => 'required|in:active,inactive',
-            'images' => 'nullable|array',  // On accepte une collection d'images
+            'images' => 'nullable|array',
             'images.*' => 'mimes:jpeg,png,jpg|max:2048',  // Validation pour chaque image
         ]);
 
@@ -63,15 +63,18 @@ class AppartementController extends Controller
         // Si des images sont envoyées, on les traite
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                // On stocke l'image
-                $imagePath = $image->store('appartement/images', 'public'); // On stocke dans 'public/appartements/images'
-
-                // Sauvegarde de l'image dans la table `appartement_images` avec l'appartement associé
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('appartement'), $imageName);
+                if (!file_exists(public_path('appartement/' . $imageName))) {
+                    dd('Erreur : Image non enregistrée');
+                }
                 $appartement->images()->create([
-                    'image_path' => $imagePath,
+                    'image_path' => 'appartement/' . $imageName,
                 ]);
             }
         }
+
+
 
         // Redirection avec succès
         return redirect()->route('appartements.index')->with('success', 'Appartement créé avec succès!');

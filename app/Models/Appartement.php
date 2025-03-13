@@ -10,6 +10,7 @@ class Appartement extends Model
     use HasFactory;
 
     protected $fillable = [
+        'sub_category_id',
         'niveau',
         'designation',
         'surface',
@@ -21,11 +22,17 @@ class Appartement extends Model
         'sdb',
         'wc',
         'terrasse',
-        'status',
+        'status'
     ];
+
 
     public function images()
     {
         return $this->hasMany(AppartementImage::class);
+    }
+
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategory::class, 'sub_category_id');
     }
 }
