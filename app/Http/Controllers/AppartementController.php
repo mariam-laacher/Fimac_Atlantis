@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use App\Models\Subcategory;
 use App\Models\Appartement;
-use App\Models\AppartementImage;
+use App\Models\SubCategory;
 
 class AppartementController extends Controller
 {
