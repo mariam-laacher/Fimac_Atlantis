@@ -383,6 +383,22 @@
                           <span>Sous-Catégories</span>
                       </a>
                     </li>
+                    <li class="sidebar-list">
+                      <a class="sidebar-link sidebar-title" href="{{ route('appartements.index') }}">
+                          <!-- Icône pour Appartements -->
+                          <svg class="stroke-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M21 21V3H3v18h18z"></path>
+                              <path d="M12 2v20"></path>
+                          </svg>
+                  
+                          <svg class="fill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                              <path d="M21 21V3H3v18h18z"></path>
+                              <path d="M12 2v20"></path>
+                          </svg>
+                  
+                          <span>Appartements</span>
+                      </a>
+                  </li>                  
                 </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

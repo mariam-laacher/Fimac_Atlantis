@@ -88,19 +88,24 @@
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#"> Nos Projet</a>
                                             <ul class="dropdown-menu">
-                                                <li class="dropdown"> <a class="dropdown-toggle dropdown-item" href="{{route('residence')}}">Projet Haut Standing</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="{{route('riyad')}}">Residence Riyad</a></li>
-                                                        <li><a class="dropdown-item" href="{{route('medinova')}}">Residence Medinova </a></li>
-                                                    </ul>
-                                                </li>
-
-                                                <li class="dropdown"> <a class="dropdown-toggle dropdown-item" href="property-grid-v1.html">Villa</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="property-grid-v1.html">Villa A</a></li>
-                                                        <li><a class="dropdown-item" href="property-grid-v2.html">Villa B </a></li>
-                                                    </ul>
-                                                </li>
+                                                @foreach($categories as $category)
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle dropdown-item" href="#">
+                                                            {{ $category->name }}
+                                                        </a>
+                                                        @if($category->subCategories->count() > 0)
+                                                            <ul class="dropdown-menu">
+                                                                @foreach($category->subCategories as $subCategory)
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            {{ $subCategory->name }}
+                                                                        </a>
+                                                                    </li>
+                                                                @endforeach
+                                                            </ul>
+                                                        @endif
+                                                    </li>
+                                                 @endforeach
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
