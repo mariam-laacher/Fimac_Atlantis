@@ -8,7 +8,7 @@
         
                 <!-- Slide 1 -->
                 <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:5000; transition2d:104; kenburnsscale:1.00;">
-                    <img width="1920" height="960" src="assets/images/slider/1.png" class="ls-bg" alt="" />
+                    <img width="1920" height="960" src="assets/images/slider/pepa.png" class="ls-bg" alt="" />
                     <p style="font-size:48px; font-weight:700; top:370px; left:50%; font-family: 'Sen', sans-serif;" class="ls-l ls-hide-phone text-white" data-ls="offsetyin:100%; durationin:1500; delayin:1000; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Residence Riyad</p>
                     <p style="top:450px; left:50%; text-align:center; font-weight:400; font-style:normal; text-decoration:none; width:650px; font-size:18px; color:#ffffff; line-height:30px; white-space:normal;" class="ls-l ls-hide-phone" data-ls="offsetyin:100%; durationin:1500; delayin:1500; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Profitez d'un cadre de vie harmonieux, des commodités haut de gamme et parfaitement conçus pour votre bien-être</p>
                     <a style="" class="ls-l ls-hide-phone" href="{{route('riyad')}}" target="_self" data-ls="offsetyin:40; delayin:2000; clipin:0 0 100% 0; durationout:400; hover:true; hoverdurationin:300; hoveropacity:1; hoverbgcolor:#222; hovercolor:#aa8453;">
@@ -18,7 +18,7 @@
         
                 <!-- Slide 2 -->
                 <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:5000; transition2d:104; kenburnsscale:1.00;">
-                    <img width="1920" height="960" src="assets/images/slider/14.png" class="ls-bg" alt="" />
+                    <img width="1920" height="960" src="assets/images/slider/image.png" class="ls-bg" alt="" />
                     <p style="font-size:48px; font-weight:700; top:370px; left:50%; font-family: 'Sen', sans-serif;" class="ls-l ls-hide-phone text-white" data-ls="offsetyin:100%; durationin:1500; delayin:1000; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Residence Medinova</p>
                     <p style="top:450px; left:50%; text-align:center; font-weight:400; font-style:normal; text-decoration:none; width:650px; font-size:18px; color:#ffffff; line-height:30px; white-space:normal;" class="ls-l ls-hide-phone" data-ls="offsetyin:100%; durationin:1500; delayin:1500; clipin:0 0 100% 0; durationout:400; parallaxlevel:0;">Allie modernité et confort pour répondre à toutes vos attentes.</p>
                     <a style="" class="ls-l ls-hide-phone" href="{{route('medinova')}}" target="_self" data-ls="offsetyin:40; delayin:2000; clipin:0 0 100% 0; durationout:400; hover:true; hoverdurationin:300; hoveropacity:1; hoverbgcolor:#222; hovercolor:#aa8453;">
