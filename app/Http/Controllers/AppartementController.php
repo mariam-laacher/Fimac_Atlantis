@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Subcategory;
 
+
+use Illuminate\Http\Request;
+use App\Models\Subcategory;
 use App\Models\Appartement;
 use App\Models\AppartementImage;
-use Illuminate\Http\Request;
 
 class AppartementController extends Controller
 {
