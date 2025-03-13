@@ -62,7 +62,8 @@
                     <tr> 
                       <td>
                         @if ($appartement->images->isNotEmpty())
-                            <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement" width="100" height="100">
+                            <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement" 
+                                 style="width: 100px; height: 100px; object-fit: cover; margin: 5px; border-radius: 5px;">
                         @else
                             <p>Aucune image disponible.</p>
                         @endif

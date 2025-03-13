@@ -20,20 +20,27 @@
 <script src="{{ asset('adminAssets/js/jquery.min.js') }}"></script>
 <!-- Bootstrap js-->
 <script src="{{ asset('adminAssets/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
-<!-- feather icon js-->
+<!-- Feather icon js-->
 <script src="{{ asset('adminAssets/js/icons/feather-icon/feather.min.js') }}"></script>
 <script src="{{ asset('adminAssets/js/icons/feather-icon/feather-icon.js') }}"></script>
-<!-- scrollbar js-->
+<!-- Scrollbar js-->
 <script src="{{ asset('adminAssets/js/scrollbar/simplebar.js') }}"></script>
 <script src="{{ asset('adminAssets/js/scrollbar/custom.js') }}"></script>
 <!-- Sidebar jquery-->
 <script src="{{ asset('adminAssets/js/config.js') }}"></script>
 <script src="{{ asset('adminAssets/js/sidebar-menu.js') }}"></script>
 <script src="{{ asset('adminAssets/js/sidebar-pin.js') }}"></script>
-
+<!-- Chart js-->
+<script src="{{ asset('adminAssets/js/chart/apex-chart/moment.min.js') }}"></script>
+<script src="{{ asset('adminAssets/js/chart/apex-chart/apex-chart.js') }}"></script>
+<script src="{{ asset('adminAssets/js/chart/apex-chart/stock-prices.js') }}"></script>
+<!-- Plugins JS start-->
+<script src="{{ asset('adminAssets/js/chart-widget.js') }}"></script>
+<!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="{{ asset('adminAssets/js/script.js') }}"></script>
 {{-- <script src="{{ asset('adminAssets/js/theme-customizer/customizer.js') }}"></script> --}}
+
 
 <!-- Plugin used-->
 </body>
