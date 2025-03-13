@@ -30,7 +30,7 @@
         <div class="form theme-form">
             <form action="{{ route('appartements.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-
+            
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="mb-3">
@@ -45,7 +45,7 @@
                         <div class="mb-3">
                             <label>Niveau</label>
                             <select class="form-select" name="niveau" required>
-                                <option value="" disabled selected>Sélectionner le niveau</option>
+                                <option value="" disabled {{ old('niveau') ? '' : 'selected' }}>Sélectionner le niveau</option>
                                 <option value="rdc" {{ old('niveau') == 'rdc' ? 'selected' : '' }}>Rez-de-Chaussée</option>
                                 <option value="mezzanine" {{ old('niveau') == 'mezzanine' ? 'selected' : '' }}>Mezzanine</option>
                                 <option value="1er_etage" {{ old('niveau') == '1er_etage' ? 'selected' : '' }}>1er étage</option>
@@ -258,7 +258,7 @@
         const imagePreviewsContainer = document.getElementById('imagePreviews');
         const previewContainer = document.getElementById('imagePreviewContainer');
         
-        imagePreviewsContainer.innerHTML = ''; // Nettoyer l'aperçu précédent
+        imagePreviewsContainer.innerHTML = '';
 
         if (fileInput.files.length > 0) {
             previewContainer.style.display = 'block';

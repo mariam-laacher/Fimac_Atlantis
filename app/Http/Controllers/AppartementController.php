@@ -73,27 +73,29 @@ class AppartementController extends Controller
                 ]);
             }
         }
-
-
-
         // Redirection avec succès
         return redirect()->route('appartements.index')->with('success', 'Appartement créé avec succès!');
     }
 
 
 
-    public function show(Appartement $appartement)
+    public function show($id)
     {
-        return view('admin.appartements.show', compact('appartement'));
+        $appartement = Appartement::with('images')->find($id); // Assure-toi que les images sont bien récupérées
+        return view('appartement.show', compact('appartement'));
     }
+
 
     public function edit(Appartement $appartement)
     {
-        return view('admin.appartements.edit', compact('appartement'));
+        $subcategories = Subcategory::where('status', 'active')->get();
+        return view('admin.appartements.edit', compact('appartement', 'subcategories'));
     }
+
 
     public function update(Request $request, Appartement $appartement)
     {
+        // Validation des données envoyées
         $validated = $request->validate([
             'sub_category_id' => 'required|exists:sub_categories,id',
             'niveau' => 'required|string|max:255',
@@ -108,16 +110,50 @@ class AppartementController extends Controller
             'wc' => 'nullable|integer',
             'terrasse' => 'nullable|boolean',
             'status' => 'required|in:active,inactive',
+            'images' => 'nullable|array', // Validation des nouvelles images
+            'images.*' => 'mimes:jpeg,png,jpg|max:2048',  // Validation pour chaque image
         ]);
 
+        // Mise à jour des données de l'appartement
         $appartement->update($validated);
+
+        if ($request->hasFile('images')) {
+            foreach ($appartement->images as $image) {
+                $imagePath = public_path($image->image_path);
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                }
+            }
+
+            $appartement->images()->delete();
+
+            foreach ($request->file('images') as $image) {
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('appartement'), $imageName); // Sauvegarder les images dans le répertoire public/appartement
+                if (!file_exists(public_path('appartement/' . $imageName))) {
+                    dd('Erreur : Image non enregistrée');
+                }
+
+                $appartement->images()->create([
+                    'image_path' => 'appartement/' . $imageName,
+                ]);
+            }
+        }
 
         return redirect()->route('appartements.index')->with('success', 'Appartement mis à jour avec succès!');
     }
 
+
     public function destroy(Appartement $appartement)
     {
+        foreach ($appartement->images as $image) {
+            $imagePath = public_path($image->image_path);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+        $appartement->images()->delete();
         $appartement->delete();
-        return redirect()->route('appartements.index')->with('success', 'Appartement supprimé avec succès!');
+        return redirect()->route('appartements.index')->with('success', 'Appartement et images supprimés avec succès!');
     }
 }

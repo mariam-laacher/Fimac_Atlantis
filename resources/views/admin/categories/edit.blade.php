@@ -72,7 +72,7 @@
                             <label>Importer une image de la catégorie</label>
                             <input type="file" class="form-control" name="image" id="imageInput" accept=".jpg, .jpeg, .png" onchange="previewImage(event)">
                             <div id="imagePreviewContainer" style="margin-top: 10px; {{ $category->image ? '' : 'display: none;' }}">
-                                <img id="imagePreview" src="{{ $category->image ? asset($category->image) : '#' }}" alt="Aperçu de l'image" style="max-height: 200px; border: 1px solid #ddd; padding: 5px; display: block;">
+                                <img id="imagePreview" src="{{ $category->image ? asset($category->image) : '#' }}" alt="Aperçu de l'image"  style="width: 100px; height: 100px; object-fit: cover; margin: 5px; border-radius: 5px;">
                                 <button type="button" class="btn btn-danger btn-sm mt-2" onclick="removeImage()">Supprimer l'image</button>
                             </div>
                             @error('image')
