@@ -195,73 +195,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <!-- Property Grid -->
-                                <div class="property-grid-1 property-block bg-white transation-this">
-                                    <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
-                                        {{-- <div class="cata position-absolute"><span class="sale bg-secondary text-white">For Sale</span></div> --}}
-                                        <a href="property-single-v1.html"><img src="assets/images/property_grid/terrasseRyad.png" alt="Image Not Found!"></a>
-                                        <a href="#" class="listing-ctg text-white"><i class="fa-solid fa-building"></i><span>Apartment avec Terrasse
-                                        </span></a>
-                                        <ul class="position-absolute quick-meta">
-                                            {{-- <li><a href="#" title="Add Compare"><i class="flaticon-transfer flat-mini"></i></a></li>
-                                            <li><a href="#" title="Add Favourite"><i class="flaticon-like-1 flat-mini"></i></a></li> --}}
-                                            {{-- <li class="md-mx-none"><a class="quick-view" href="#quick-view" title="Quick View"><i class="flaticon-zoom-increasing-symbol flat-mini"></i></a></li> --}}
-                                        </ul>
-                                    </div>
-                                    <div class="property_text p-4">
-                                        {{-- <span class="listing-price">$1850<small> ( Monthly )</small></span> --}}
-                                        {{-- <h5 class="listing-title"><a href="property-single-v1.html">Family House Residense</a></h5> --}}
-                                        {{-- <span class="listing-location"><i class="fas fa-map-marker-alt"></i> 4213 South Burlington, VT 05403</span> --}}
-                                        <ul class="d-flex quantity font-fifteen justify-content-center align-items-center">
-                                            <li title="Rooms"><span><i class="fa-solid fa-door-open"></i></span> 1</li>
-                                            <li title="Baths"><span><i class="fa-solid fa-shower"></i></span> 1</li>
-                                            <li title="Bathroom"><span><i class="fa-solid fa-toilet"></i></span> 1</li>
-                                            <li title="Area"><span><i class="fa-solid fa-vector-square"></i></span> 54,63 m²</li>
-                                            <li title="Climatisation"><span><i class="fa-solid fa-fan"></i></span> Yes</li>
-                                        </ul>                                        
-                                    </div>
-                                    <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
-                                        <div class="agent">
-                                            <a href="#" class="d-flex text-general align-items-center"><img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata"><span>Residence Riyad</span></a>
-                                        </div>
-                                        {{-- <div class="post-date ms-auto"><span>2 Month Ago</span></div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- Property Grid -->
-                                <div class="property-grid-1 property-block bg-white transation-this">
-                                    <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
-                                        {{-- <div class="cata position-absolute"><span class="sale bg-secondary text-white">For Sale</span></div> --}}
-                                        <a href="property-single-v1.html"><img src="assets/images/property_grid/standardRyad.png" alt="Image Not Found!"></a>
-                                        <a href="#" class="listing-ctg text-white"><i class="fa-solid fa-building"></i><span>Apartment Standars</span></a>
-                                        <ul class="position-absolute quick-meta">
-                                            {{-- <li><a href="#" title="Add Compare"><i class="flaticon-transfer flat-mini"></i></a></li>
-                                            <li><a href="#" title="Add Favourite"><i class="flaticon-like-1 flat-mini"></i></a></li> --}}
-                                            {{-- <li class="md-mx-none"><a class="quick-view" href="#quick-view" title="Quick View"><i class="flaticon-zoom-increasing-symbol flat-mini"></i></a></li> --}}
-                                        </ul>
-                                    </div>
-                                    <div class="property_text p-4">
-                                        {{-- <span class="listing-price">$1850<small> ( Monthly )</small></span> --}}
-                                        {{-- <h5 class="listing-title"><a href="property-single-v1.html">Family House Residense</a></h5> --}}
-                                        {{-- <span class="listing-location"><i class="fas fa-map-marker-alt"></i> 4213 South Burlington, VT 05403</span> --}}
-                                        <ul class="d-flex quantity font-fifteen justify-content-center align-items-center">
-                                            <li title="Rooms"><span><i class="fa-solid fa-door-open"></i></span> 2</li>
-                                            <li title="Baths"><span><i class="fa-solid fa-shower"></i></span> 2</li>
-                                            <li title="Bathroom"><span><i class="fa-solid fa-toilet"></i></span> 2</li>
-                                            <li title="Area"><span><i class="fa-solid fa-vector-square"></i></span> 96,40 m²</li>
-                                            <li title="Climatisation"><span><i class="fa-solid fa-fan"></i></span> Yes</li>
-                                        </ul>                                        
-                                    </div>
-                                    <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
-                                        <div class="agent">
-                                            <a href="#" class="d-flex text-general align-items-center"><img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata"><span>Residence Riyad</span></a>
-                                        </div>
-                                        {{-- <div class="post-date ms-auto"><span>2 Month Ago</span></div> --}}
-                                    </div>
-                                </div>
-                            </div>
+                           
                             {{-- <div class="item">
                                 <!-- Property Grid -->
                                 <div class="property-grid-1 property-block bg-white transation-this">
