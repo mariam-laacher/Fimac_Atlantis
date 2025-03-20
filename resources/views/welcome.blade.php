@@ -120,14 +120,14 @@
                                                     <div class="cata position-absolute">
                                                         {{-- <span class="sale bg-secondary text-white">For Sale</span> --}}
                                                     </div>
-                                                    <a href="$">  
+                                                    <a href="{{ route('subCategory.show', ['id' => $subCategory->id]) }}">  
                                                         {{-- {{ route('subcategory.show', $subCategory->id) }} --}}
                                                         <img src="{{ asset($subCategory->image) }}" alt="Image Not Found!" style="width: 100%; height: 400px; object-fit: cover;">
                                                     </a>
                                 
                                                     <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
                                                         <div class="agent">
-                                                            <a href="#" class="d-flex text-general align-items-center">
+                                                            <a href="{{ route('subCategory.show', ['id' => $subCategory->id]) }}" class="d-flex text-general align-items-center">
                                                                 <img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avata">
                                                                 <span>{{ $subCategory->name }}</span>  <!-- Display the subcategory name -->
                                                             </a>
