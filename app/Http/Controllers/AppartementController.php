@@ -161,8 +161,10 @@ class AppartementController extends Controller
     public function showbyid($id)
     {
         $categories = Category::with('subCategories')->get();
-        $apartment = Appartement::with('subCategory')->findOrFail($id);
+        $apartment = Appartement::with('images', 'subCategory')->findOrFail($id);
         $subCategory = $apartment->subCategory;
-        return view('apartments.show', compact('subCategory', 'apartment', 'categories'));
+        $apartments = Appartement::where('sub_category_id', $subCategory->id)->paginate(10);
+
+        return view('apartments.show', compact('subCategory', 'apartment', 'categories', 'apartments'));
     }
 }

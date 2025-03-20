@@ -25,10 +25,18 @@
                 <div class="footer-widget contact-widget mb-4">
                     <h3 class="widget-title mb-4">Contact Info</h3>
                     <ul>
-                        <li>Adresse de notre société :Citrine A immeuble 8 bureau 3 1er étage</li>
-                        <a href="https://wa.me/212660114297" target="_blank">   <li>+212 660-114297</li></a>
-                        <li><a href="mailto:fimac.atlantis@gmail.com">fimac.atlantis@gmail.com</a></li>
-                    </ul>
+                        <li>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Citrine+A+immeuble+8+bureau+3+1er+étage" target="_blank">
+                                Citrine A immeuble 8 bureau 3 1er étage
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/212660114297" target="_blank">+212 660-114297</a>
+                        </li>
+                        <li>
+                            <a href="mailto:fimac.atlantis@gmail.com">fimac.atlantis@gmail.com</a>
+                        </li>
+                    </ul>                    
                 </div>
             </div>
             <div class="col">
@@ -199,6 +207,83 @@
             height:840,
             skinsPath: 'assets/skins/'
         });
+        $('#single-property').layerSlider({
+            sliderVersion: '6.5.0b2',
+            type: 'popup',
+            pauseOnHover: 'disabled',
+            skin: 'photogallery',
+            globalBGSize: 'cover',
+            navStartStop: false,
+            hoverBottomNav: true,
+            showCircleTimer: false,
+            thumbnailNavigation: 'always',
+            tnContainerWidth: '100%',
+            tnHeight: 70,
+            popupShowOnTimeout: 1,
+            popupShowOnce: false,
+            popupCloseButtonStyle: 'background: rgba(0,0,0,.5); border-radius: 2px; border: 0; left: auto; right: 10px;',
+            popupResetOnClose: 'disabled',
+            popupDistanceLeft: 20,
+            popupDistanceRight: 20,
+            popupDistanceTop: 20,
+            popupDistanceBottom: 20,
+            popupDurationIn: 750,
+            popupDelayIn: 500,
+            popupTransitionIn: 'scalefromtop',
+            popupTransitionOut: 'scaletobottom',
+            skinsPath: 'assets/skins/'
+        });
+    
+        // Statistic
+        if (document.querySelector('#mychart') !== null) {
+            var ctx = document.getElementById("mychart").getContext('2d');
+    
+            // Data with datasets options
+            var data = {
+                type: 'line',
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+                datasets: [{
+                    label: 'Growth',
+                    fill: true,
+                    backgroundColor: "#def7e0",
+                    borderColor: "#17c788",
+                    data: [0, 150, 450, 400, 480, 630, 580, 500, 530, 400, 430, 600, 400],
+                }]
+            }
+    
+            // Chart declaration with some options:
+            var mychart = new Chart(ctx, {
+                type: 'line',
+                data: data,
+            });
+        }
+    
+        //Doughnut and Pie
+        if (document.querySelector('#mychart-2') !== null) {
+            var ctx2 = document.getElementById("mychart-2").getContext('2d');
+    
+            // Data with datasets options
+            var data2 = {
+                type: 'doughnut',
+                labels: ['Desktop', 'Tablet', 'Mobile'],
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)']
+                }],
+    
+            };
+    
+            // For a pie chart
+            var myPieChart = new Chart(ctx2, {
+                type: 'pie',
+                data: data2,
+            });
+            // And for a doughnut chart
+            var myDoughnutChart = new Chart(ctx2, {
+                type: 'doughnut',
+                data: data2,
+            });
+        }
     </script>
 </body>
 
