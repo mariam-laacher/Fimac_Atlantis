@@ -5,7 +5,7 @@
             <div class="col">
                 <div class="footer-widget mb-4">
                     <div class="footer-logo mb-4">
-                        <a href="#"><img src="assets/images/logo/fimaclogo3.png" alt="Image not found!" /></a> <br><br>
+                        <a href="#"><img src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="Image not found!" /></a> <br><br>
                     </div><br><br>
                     <p>Un confort raffiné et une harmonie élégante : chaque espace est pensé pour offrir une touche d’anticipation, un équilibre parfait et une clarté dans vos choix, répondant à toutes vos attentes en immobilier.</p>
                 </div>

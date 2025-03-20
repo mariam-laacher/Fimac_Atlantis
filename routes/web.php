@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AppartementController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AppartementImageController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -20,18 +20,12 @@ Route::get('/About-Us', function () {
 Route::get('/localisation', function () {
     return view('localisation');
 })->name('localisation');
-Route::get('/riyad', function () {
-    return view('riyad');
-})->name('riyad');
-Route::get('/medinova', function () {
-    return view('medinova');
-})->name('medinova');
-Route::get('/unite', function () {
-    return view('unite');
-})->name('unite');
+
+
 
 Route::get('residence/{subCategoryName}', [SubCategoryController::class, 'show'])->name('residence');
 Route::get('/subcategory/{id}', [SubCategoryController::class, 'showbyid'])->name('subCategory.show');
+Route::get('/apartments/{id}', [AppartementController::class, 'showbyid'])->name('apartments.show');
 
 
 Route::controller(AuthController::class)->group(function () {

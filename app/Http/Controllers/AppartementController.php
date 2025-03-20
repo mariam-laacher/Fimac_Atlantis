@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Appartement;
 use App\Models\SubCategory;
+use App\Models\Category;
 
 class AppartementController extends Controller
 {
@@ -155,5 +156,13 @@ class AppartementController extends Controller
         $appartement->images()->delete();
         $appartement->delete();
         return redirect()->route('appartements.index')->with('success', 'Appartement et images supprimés avec succès!');
+    }
+
+    public function showbyid($id)
+    {
+        $categories = Category::with('subCategories')->get();
+        $apartment = Appartement::with('subCategory')->findOrFail($id);
+        $subCategory = $apartment->subCategory;
+        return view('apartments.show', compact('subCategory', 'apartment', 'categories'));
     }
 }

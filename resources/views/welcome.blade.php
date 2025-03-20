@@ -168,14 +168,14 @@
                                     <div class="property-grid-1 property-block bg-white transation-this">
                                         <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
                                             @if ($appartement->images->isNotEmpty())
-                                                <a href="{{ route('appartements.show', $appartement->id) }}">
+                                                <a href="{{ route('apartments.show', $appartement->id) }}">
                                                     <img src="{{ asset($appartement->images->first()->image_path) }}" alt="Appartement" style="width: 100%; height: 400px; object-fit: cover;">
                                                 </a>
                                             @else
                                                 <p>Aucune image disponible.</p>
                                             @endif
 
-                                            <a href="#" class="listing-ctg text-white" style="background-color: #aa8453; padding-left: 12px; padding-right: 12px;">
+                                            <a href="{{ route('apartments.show', $appartement->id) }}" class="listing-ctg text-white" style="background-color: #aa8453; padding-left: 12px; padding-right: 12px;">
                                                 <i class="fa-solid fa-building" style="color: white;"></i><span> {{ $appartement->designation }} </span>
                                             </a>
 
@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="d-flex align-items-center post-meta mt-2 py-3 px-4 border-top">
                                             <div class="agent">
-                                                <a href="#" class="d-flex text-general align-items-center">
+                                                <a href="{{ route('apartments.show', $appartement->id) }}" class="d-flex text-general align-items-center">
                                                     <img class="rounded-circle me-2" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="avatar">
                                                     <span style="color: #aa8453;">{{ $appartement->subcategory->name }}</span>
                                                 </a>
