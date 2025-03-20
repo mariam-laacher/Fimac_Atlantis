@@ -77,10 +77,7 @@
                         <div class="col">
                             <nav class="navbar navbar-expand-lg nav-white nav-primary-hover nav-line-active">
                                 <a class="navbar-brand" href="{{route('home')}}"><img class="nav-logo" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="Image not found !"></a>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon flaticon-menu flat-small text-primary"></span>
-                                  </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div class="collapse navbar-collapse">
                                     <ul class="navbar-nav ms-auto">
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('home')}}">Acceuil</a>
@@ -89,23 +86,23 @@
                                             <a class="nav-link dropdown-toggle" href="#"> Nos Projet</a>
                                             <ul class="dropdown-menu">
                                                 @foreach($categories as $category)
-                                                    <li class="dropdown">
-                                                        <a class="dropdown-toggle dropdown-item" href="#">
-                                                            {{ $category->name }}
-                                                        </a>
-                                                        @if($category->subCategories->count() > 0)
-                                                            <ul class="dropdown-menu">
-                                                                @foreach($category->subCategories as $subCategory)
-                                                                    <li>
-                                                                        <a class="dropdown-item" href="#">
-                                                                            {{ $subCategory->name }}
-                                                                        </a>
-                                                                    </li>
-                                                                @endforeach
-                                                            </ul>
-                                                        @endif
-                                                    </li>
-                                                 @endforeach
+                                                <li class="dropdown">
+                                                    <a class="dropdown-toggle dropdown-item" href="#">
+                                                        {{ $category->name }}
+                                                    </a>
+                                                    @if($category->subCategories->count() > 0)
+                                                        <ul class="dropdown-menu">
+                                                            @foreach($category->subCategories as $subCategory)
+                                                                <li>
+                                                                    <a class="dropdown-item" href="{{ route('subCategory.show', ['id' => $subCategory->id]) }}">
+                                                                        {{ $subCategory->name }}
+                                                                    </a>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    @endif
+                                                </li>
+                                            @endforeach                                            
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">

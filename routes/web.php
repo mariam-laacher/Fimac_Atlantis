@@ -28,6 +28,7 @@ Route::get('/medinova', function () {
 })->name('medinova');
 
 Route::get('residence/{subCategoryName}', [SubCategoryController::class, 'show'])->name('residence');
+Route::get('/subcategory/{id}', [SubCategoryController::class, 'showbyid'])->name('subCategory.show');
 
 
 Route::controller(AuthController::class)->group(function () {

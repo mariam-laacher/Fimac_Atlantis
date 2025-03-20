@@ -96,9 +96,18 @@ class SubCategoryController extends Controller
 
     public function show($subCategoryName)
     {
+        $categories = Category::with('subCategories')->get();
         $subCategoryName = str_replace(['+', '_'], ' ', urldecode($subCategoryName));
         $subCategory = SubCategory::where('name', $subCategoryName)->firstOrFail();
         $apartments = Appartement::where('sub_category_id', $subCategory->id)->paginate(10);
-        return view('residence.show', compact('subCategory', 'apartments'));
+        return view('residence.show', compact('subCategory', 'apartments', 'categories'));
+    }
+
+    public function showbyid($id)
+    {
+        $categories = Category::with('subCategories')->get();
+        $subCategory = SubCategory::findOrFail($id);
+        $apartments = Appartement::where('sub_category_id', $subCategory->id)->paginate(10);
+        return view('subCategory.show', compact('subCategory', 'apartments', 'categories'));
     }
 }
