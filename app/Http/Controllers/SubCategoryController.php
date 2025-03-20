@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appartement;
 use App\Models\Category;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -90,5 +92,13 @@ class SubCategoryController extends Controller
         $subCategory->delete();
 
         return redirect()->route('sub_categories.index')->with('success', 'Sous-catégorie supprimée avec succès.');
+    }
+
+    public function show($subCategoryName)
+    {
+        $subCategoryName = str_replace(['+', '_'], ' ', urldecode($subCategoryName));
+        $subCategory = SubCategory::where('name', $subCategoryName)->firstOrFail();
+        $apartments = Appartement::where('sub_category_id', $subCategory->id)->paginate(10);
+        return view('residence.show', compact('subCategory', 'apartments'));
     }
 }

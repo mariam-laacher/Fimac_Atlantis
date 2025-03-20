@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col">
                             <nav class="navbar navbar-expand-lg nav-secondary nav-primary-hover nav-line-active">
-                                <a class="navbar-brand" href="#"><img class="nav-logo" src="assets/images/logo/fimaclogo3.png" alt="Image not found !"></a>
+                                <a class="navbar-brand" href="{{route('home')}}"><img class="nav-logo" src="{{ asset('assets/images/logo/fimaclogo3.png') }}" alt="Image not found !"></a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon flaticon-menu flat-small text-primary"></span>
                                   </button>
@@ -67,10 +67,10 @@
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#"> Nos Projet</a>
                                             <ul class="dropdown-menu">
-                                                <li class="dropdown"> <a class="dropdown-toggle dropdown-item" href="{{route('residence')}}">Projet Haut Standing</a>
+                                                <li class="dropdown"> <a class="dropdown-toggle dropdown-item" href="#">Projet Haut Standing</a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="{{route('riyad')}}">Residence Riyad</a></li>
-                                                        <li><a class="dropdown-item" href="{{route('medinova')}}">Residence Medinova </a></li>
+                                                        <li><a class="dropdown-item" href="#">Residence Riyad</a></li>
+                                                        <li><a class="dropdown-item" href="#">Residence Medinova </a></li>
                                                     </ul>
                                                 </li>
 
