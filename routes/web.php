@@ -26,6 +26,9 @@ Route::get('/riyad', function () {
 Route::get('/medinova', function () {
     return view('medinova');
 })->name('medinova');
+Route::get('/unite', function () {
+    return view('unite');
+})->name('unite');
 
 Route::get('residence/{subCategoryName}', [SubCategoryController::class, 'show'])->name('residence');
 Route::get('/subcategory/{id}', [SubCategoryController::class, 'showbyid'])->name('subCategory.show');
