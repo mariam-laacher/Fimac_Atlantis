@@ -64,7 +64,7 @@
                             <div class="property-grid-5 property-block rounded border transation-this bg-white hover-shadow">
                                 <div class="overflow-hidden position-relative transation thumbnail-img bg-secondary hover-img-zoom">
                                     <a href="#" class="listing-ctg text-white"><span>{{ $apartment->designation }}</span></a>
-                                    <a href="#"><img src="{{ asset($apartment->images->first()->image_path) }}" alt="Image Not Found!"></a>
+                                    <a href="#"><img src="{{ asset($apartment->images->first()->image_path) }}" alt="Image Not Found!" style="width: 100%; height: 300px; object-fit: cover;"></a>
                                     {{-- <ul class="position-absolute quick-meta">
                                         <li><a href="#" title="Add Compare"><i class="flaticon-transfer flat-mini"></i></a></li>
                                         <li><a href="#" title="Add Favourite"><i class="flaticon-like-1 flat-mini"></i></a></li>
