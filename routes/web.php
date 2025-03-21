@@ -7,6 +7,7 @@ use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\AppartementController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AppartementImageController;
+use App\Http\Controllers\LocalisationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -17,9 +18,7 @@ Route::get('/About-Us', function () {
     return view('aboutus');
 })->name('aboutus');
 
-Route::get('/localisation', function () {
-    return view('localisation');
-})->name('localisation');
+Route::get('/localisation', [LocalisationController::class, 'index'])->name('localisation');
 
 
 
