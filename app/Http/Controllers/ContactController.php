@@ -26,10 +26,11 @@ class ContactController extends Controller
         ];
 
         // Envoyer l'email à l'admin
-        Mail::send('emails.contact', $data, function($message) {
-            $message->to('fimacatlantis@fimacatlantis.com') 
-                    ->subject('Nouveau message de contact');
+        Mail::send('emails.contact', ['data' => $data], function($message) {
+            $message->to('fimacatlantis@fimacatlantis.com')
+                    ->subject('Nouveau message de prise de rendez-vous');
         });
+        
 
         return back()->with('success', 'Votre message a été envoyé avec succès.');
     }
