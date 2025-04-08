@@ -50,7 +50,7 @@
                 <p class="mb-4">
                     Remplissez ce formulaire, et nous vous contacterons pour vous guider au mieux dans votre projet.
                 </p>
-                <form id="contact-form" action="#" method="post" novalidate>
+                <form id="contact-form" action="{{ route('contact.send') }}" method="post" novalidate>
                     @csrf
                     <div class="row">
                         <!-- Nom et Prénom -->
