@@ -10,14 +10,13 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AppartementImageController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LocalisationController;
-use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/localisation', [LocalisationController::class, 'index'])->name('localisation');
 Route::get('/contactus', [ContactUsController::class, 'index'])->name('contactus');
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/contact', [ContactUsController::class, 'send'])->name('contact.send');
 
 
 

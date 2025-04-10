@@ -50,7 +50,7 @@
                 <p class="mb-4">
                     Remplissez ce formulaire, et nous vous contacterons pour vous guider au mieux dans votre projet.
                 </p>
-                <form id="contact-form" action="{{ route('contact.send') }}" method="post" novalidate>
+                <form id="contact-form" action="/contact" method="post" novalidate>
                     @csrf
                     <div class="row">
                         <!-- Nom et Prénom -->
@@ -67,6 +67,16 @@
                         <div class="col-md-12 mb-3">
                             <label class="mb-2">Numéro de téléphone :</label>
                             <input type="tel" class="form-control" name="phone" placeholder="Votre numéro de téléphone" required>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label class="mb-2">Sélectionnez l'appartement :</label>
+                            <select name="appartement_id" class="form-control" required>
+                                <option value="" disabled selected>Choisissez un appartement</option>
+                                @foreach($appartements as $appartement)
+                                    <option value="{{ $appartement->id }}">{{ $appartement->titre }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <!-- Message -->
                         <div class="col-md-12 mb-3">
