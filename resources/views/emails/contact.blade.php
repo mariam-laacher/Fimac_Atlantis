@@ -15,7 +15,7 @@
         <p><strong>✉️ Email :</strong> {{ $data['email'] }}</p>
         <p><strong>🏢 Appartement sélectionné :</strong> {{ $data['appartement']->designation }}</p>
         <p><strong>📞 Téléphone :</strong> {{ $data['phone'] }}</p>
-        <p><strong>📝 Message :</strong>{{ $data['message'] }}</p>
+        <p><strong>📝 Message :</strong> {{ $data['message'] }}</p>
 
         <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 30px 0;">
 
