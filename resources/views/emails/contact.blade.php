@@ -13,6 +13,7 @@
         <!-- Détails du message -->
         <p><strong>👤 Nom :</strong> {{ $data['name'] }}</p>
         <p><strong>✉️ Email :</strong> {{ $data['email'] }}</p>
+        <p><strong>🏢 Appartement sélectionné :</strong> {{ $data['appartement']->designation }}</p>
         <p><strong>📞 Téléphone :</strong> {{ $data['phone'] }}</p>
         <p><strong>📝 Message :</strong>{{ $data['message'] }}</p>
 
