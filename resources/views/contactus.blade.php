@@ -74,7 +74,7 @@
                             <select name="appartement_id" class="form-control" required>
                                 <option value="" disabled selected>Choisissez un appartement</option>
                                 @foreach($appartements as $appartement)
-                                    <option value="{{ $appartement->id }}">{{ $appartement->titre }}</option>
+                                    <option value="{{ $appartement->id }}">{{ $appartement->designation }}</option>
                                 @endforeach
                             </select>
                         </div>
